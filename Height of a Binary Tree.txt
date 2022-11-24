@@ -1,0 +1,17 @@
+int count=0;
+    int height(Node* root) {
+        
+        if(root!=NULL)
+        {
+            count++;
+            height(root->right);
+            if(root->right==NULL)
+            {
+                height(root->left);
+            }
+            
+           
+        }
+        return count-1;
+    }
+   
